@@ -1,2 +1,2 @@
 # ProjectsAndWork
-Config files for my GitHub profile.
+All projects and homeworks that I had during college.
