@@ -1,0 +1,54 @@
+/*Bălan Mihai*/
+#turn {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    position: absolute;
+    margin-top: -450px;
+}
+
+#winner {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    position: absolute;
+    margin-top: 500px;
+}
+
+.form {
+    width: 400px;
+    height: 600px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 1%;
+    margin-top: 100px;
+    border: 1px solid black;
+    flex-basis: 100%;
+}
+
+#tile {
+    height: 100px;
+    width: 100px;
+    background-color: gainsboro;
+    border: solid 1px black;
+    border-radius: 5%;
+    margin-right: 5px;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 100px;
+}
+
+.celule {
+    top: -100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}

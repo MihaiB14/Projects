@@ -1,0 +1,13 @@
+În programarea web de multe ori va trebui să facem chestiuni de această natură: modalități prin care utilizatorul își poate transmite datele către aplicația noastră pentru diverse procesări. Tema voastră este să replicați formularul de deasupra cu următoarele indicații:
+
+- Titlul și formularul trebuie să fie centrate în pagină
+- formularul trebuie să aibă un background colorat, o nuanță de gri la alegerea voastră
+- inputurile și textul trebuie spațiat (hint: by default sunt spațiate datorită faptului că tagurile au proprietățile lor de css. Dacă doriți să le spațiați manual puteți folosi un css reset. Trebuie doar să includeți css-ul de acolo în stylesheet-ul vostru)
+- inputurile și formularul trebuie să aibă colțuri rotunjite (inputurile mai rotunjite decât formularul)
+
+Următoarele efecte trebuie să apară:
+- cand dau click pe input sa scriu
+- cand fac hover peste checkbox sa apara o umbra in spatele casutei
+- cand fac hover peste buton culoarea acestuia sa devina un gri mai inchis
+
+Tranziția butonului trebuie să fie de 0.2 secunde.

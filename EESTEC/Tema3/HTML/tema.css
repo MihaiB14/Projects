@@ -1,0 +1,96 @@
+img {
+    height: 190px;
+    width: 230px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 18;
+}
+
+.line {
+    width: 230px;
+    height: 2px;
+    background-color: black;
+    margin-left: 10px;
+}
+
+.description {
+    text-align: left;
+    font-size: 15;
+    margin-left: 20px;
+}
+
+.card {
+    height: 400px;
+    width: 250px;
+    position: relative;
+    top: 100px;
+    left: 50px;
+    margin: 50px;
+}
+
+.card::before {
+    position: absolute;
+    content: "";
+    outline: 1px solid blue;
+    width: 250px;
+    height: 400;
+}
+
+.card::after {
+    position: absolute;
+    content: "";
+    outline: 1px solid red;
+    width: 250px;
+    height: 400;
+    top: 5px;
+    left :5px;
+}
+
+.card:hover::after {
+    animation: animatie1 3s infinite;
+}
+
+.card:hover::before {
+    animation: animatie2 3s infinite;
+}
+
+.card:hover {
+    margin-top: 250px;
+}
+
+@keyframes animatie1 {
+    0% {
+        left: -10px;
+    }
+
+    50% {
+        left: 10px;
+    }
+
+    100% {
+        left: -10px;
+    }
+}
+
+@keyframes animatie2 {
+    0% {
+        left: 10px;
+    }
+
+    50% {
+        left: -10px;
+    }
+
+    100% {
+        left: 10px;
+    }
+}
+
+.chenar {
+    display: flex;
+}

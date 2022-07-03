@@ -1,0 +1,8 @@
+Cerinte:
+- 4 carduri spatiate egal in modul pe care il vedeti in poza (spoiler alert, trebuie facuta spatierea automat nu sa puneti margini manual intre carduri). Pe mobil trebuie sa fie o singura coloana. Mobil inseamna sub 600px. Pozele trebuie sa aiba aceeasi lungime si inaltime in fiecare card.
+- cardurile trebuie sa aibe o imagine a unui personaj favorit de-al vostru, numele acestuia si functie. Trebuie sa existe o linie intre nume si functie
+- pe mobil cardurile trebuie sa schimbe directia in jos si trebuie sa fie centrate pe pagina
+- trebuie sa aveți un buton “Scroll Back To Top” doar pe interfata de mobil(pe desktop nu trebuia sa apara), butonul nu trebuia sa faca nimic deocamdata, doar sa apara acolo. Butonul va avea o poziție fixată in pagina si va avea un text centrat pe ambele axe (verticala si orizontala)
+
+<Bonus>
+Puneți o pălărie pe doua persoana din caruselul de carduri.

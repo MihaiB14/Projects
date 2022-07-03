@@ -1,0 +1,6 @@
+Dorim sa creem o galerie de arta care sa arate similar cu exemplul din curs. Cerintele sunt urmatoarele:
+
+- 3 pagini cu cate o pictura la alegerea voastra sub forma exemplului din curs
+- imaginile de pe pagini trebuie sa fie de dimensiuni mici. atunci cand se da click pe o imagine, userul trebuie sa navigeze catre o pagina cu imaginea la dimensiuni mari pentru a o putea vedea mai bine
+- trebuie sa exista o a patra pagina care sa serveasca drept pagina principala si menu de navigare pe care o stilizati si construiti cum doriti
+- paginile de tip galerii trebuie sa aibe o optiune de navigare inapoi catre pagina principala (care sa nu fie butonul de back din browser)

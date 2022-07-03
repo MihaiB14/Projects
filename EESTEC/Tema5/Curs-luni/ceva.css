@@ -1,0 +1,22 @@
+.square {
+    width: 100px;
+    height: 100px;;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+/*div < p < h < class < id < inline < important */
+
+.active-button {
+    background-color: grey;
+}

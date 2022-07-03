@@ -1,0 +1,19 @@
+Fiecare membru are următoarele informații:
+- nume complet
+- vârstă
+- sex
+- serie și număr buletin (nu mi le puneți pe ale voastre)
+- CNP (idem)
+- buget personal
+- numărul de beri (începe de la 0)
+- numărul de pachete de țigări (începe de la 0)
+- stare de ebrietate (default false)
+
+Pe lângă aceste informații trebuie să existe următoarele funcții ce prelucrează datele:
+- cumpărat țigări (19 lei pachetul)
+- cumpărat bere (7 lei petul de Timișoreana)
+- o funcție care va asigna tuturor membrilor din departament 14 beri și 14 pachete de țigări (folosiți spread operator pentru asta, să nu vă prind cu X.beri = 14)
+verificat dacă CNP-ul și seria există (doar dacă există, nu căutați formatele valide de CNP sau serie că nu îi pasă nimănui că știți să dați CNP.length == 13). Dacă nu există, atunci acelui membru îi trebuie scăzut din buget 50 de lei pentru biletul de tren.
+*Aceste trei funcții se apelează pe un membru specific și îi scade acestuia. Pentru țigări trebuie verificat dacă membrul are peste 18 ani. De asemenea, dacă numărul de beri cumparate crește de două starea de ebrietate a acestuia, trebuie trecută pe true
+- o funcție ce parcurge membrii și afișează bugetul total rămas (însumat de la toți membrii) și câte beri și pachete de țigări mai putem cumpăra de la alimentara de la colț
+parcurs membrii și verificat numărul de oameni în stare de ebrietate

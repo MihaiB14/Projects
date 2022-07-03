@@ -1,0 +1,27 @@
+Ex1.
+Scrieți o funcție care primește un cuvânt ca și parametru. Funcția trebuie să returneze următoarele:
+
+- dacă cuvântul începe cu o vocală, trebuie să returnați cuvântul respectiv cu ‘ay’ la final
+- dacă cuvântul începe cu o consoană, trebuie să tăiați toate consoanele din cuvânt până la prima vocală, și să le anexati la final împreuna cu sintagma ‘ay’
+Exemplu:
+functie(aviator) => aviatoray
+functie(cromozom) => omozomcray
+functie(curaj) => urajcay
+
+Exercițiu Bonus (nu este nevoie sa o faci ca sa poți trimite tema DAR oricine face tema primeste o bere gratuită în Pub18 la prima ocazie)
+IMW de<code>IT 42th edition
+
+Ești la un IMW la munte și pentru a-ti vindeca mahmureala tu și un grup de EESTECeri mai nebuni decideți să faceți o mica drumetie. În grupul vostru una dintre persoane avea un telefon mai fitzos care îi zicea altitudinea la care se afla, prin urmare el sau ea a decis să-l testeze notand fiecare urcare in altitudine de 10m cu “U” și fiecare coborâre de 10m cu “D”. Astfel la sfarsit de drumetie, aflandu-se înapoi la cabana, el avea scris în aplicația de notițe un ditamai string-ul. Acum acest EESTECer se uite pe Google Maps Satellite si vede ca a trecut prin “x” vai și “y” dealuri. Treaba ta ca membru al departamentului de IT este să-l ajuți sa afle dacă telefonul și-a meritat banii prin a determina cu ajutorul notitei sale prin cate dealuri și văi a trecut.
+
+Definim următorii termeni:
+
+Un deal este o secvența de modificări de altitudine, incepand cu o urcare de la altitudinea inițială drumeției și care se termina cu o coborare la altitudinea inițială drumeției
+O vale este o secvență de modificare de altitudine, incepand cu o coborare de la altitudinea inițială drumeției și care se termina cu o urcare la altitudinea intiala drumeției.
+<Exemplu>
+Pentru String-ul: "DDUUUUDD"
+
+Drumetii încep prin a intra într-o vale de 20m adancime(2 unități), apoi urca un deal de tot 20m. La final termina traseul și ajung înapoi la cabana.
+</Exemplu>
+
+String-ul pe care EESTECer-ul îl avea notat este următorul:
+“DDUUUUDDDDUUUUDDUUUUDDUUDDUUDDDDDUUUUUDDUUDDDDUUUUUUDDDDDDDDDUUUUUDD” iar pe Google Maps vede ca trecut prin 4 vai si 6 dealuri.

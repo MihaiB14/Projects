@@ -1,0 +1,3 @@
+- Minim 4 carduri spatiate in mod egal
+- Acestea trebuie sa contina o imagine, un subtitlu si o mica descriere. Intre titulu si descriere trebuie sa existe o linie. Aceasta trebuie sa aiba un chenar ca cel din gif(ca cel albastru cu rosu).
+- Cand se face hover asupra cardurilor, acestea trebuie sa coboare fata de restul, iar border-ul sa fie animat ca in gif

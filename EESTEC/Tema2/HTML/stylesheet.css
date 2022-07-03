@@ -1,0 +1,112 @@
+/*Bălan Mihai*/
+.Forma {
+    width: 300px;
+    background-color: rgb(199, 192, 192);
+    margin: auto;
+    box-shadow: 0px 0px 5px 1px rgba(3, 3, 3, 0.75);
+    border-radius: 2px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Text_up {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.First_Name {
+    margin-left: 10px;
+    padding-top: 20px;  
+}
+
+.Latin_First_Name {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+input {
+    width: 280px;
+    height: 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: -0.5px -0.5px 0px 1px rgba(3, 3, 3, 0.75);
+
+}
+
+input:active {
+    border: solid 1px;
+    box-shadow: none;
+}
+
+.Forma input[type = "text1"] {
+    width: 280px;
+    height: 30px;
+    margin-left: 10px;
+    font-size: 10px;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.Forma input:active {
+    border:solid 1px
+}
+
+.Last_name {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.Creed {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.D_V {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.Deus_v {
+    width: 280px;
+    height: 26px;
+    background-color: rgb(255, 253, 253);
+    margin-left: 10px;
+    margin-top: 20px;
+    color: grey;
+    font-size: 10px;
+}
+
+.Robot {
+    text-align: center;
+}
+
+.Square {
+    width: 15px;
+    height: 15px;
+    margin: auto;
+    background-color: rgb(228, 228, 238);
+    box-shadow: -0.5px 0.5px 1px 0px rgba(158, 152, 152, 0.75);
+}
+
+.Square:hover {
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
+}
+
+.Submit {
+    width: 45px;
+    height: 13px;
+    background-color: white;
+    font-size: 10px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0.5px 0.5px 0px 0px rgba(3, 3, 3, 0.75);
+    transition: 0.2s all;
+}
+
+.Submit:hover {
+    background-color: grey;
+}

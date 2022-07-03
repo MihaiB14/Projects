@@ -1,0 +1,5 @@
+1. Se da array-ul const numbers = [4, 7, 25, 100, 67, 66, 900, 41, 13, 18, 1, 92, 57, 78, 45, 257]. Folosind array methods, faceti pe rând urmatorii pași:
+ - filtrati elementele pare
+ - sortati descrescator elementele ramase
+ - inversati array-ul
+2. Scrieți alte 3 exemple de array methods (în afară de cele folosite la 1).

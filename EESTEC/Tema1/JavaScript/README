@@ -1,0 +1,7 @@
+Se cer urmatoarele:
+
+- Pentru numerele de la 1 la 50 afisati mesajul ‘foo’ daca e divizibil cu 3, ‘bar’ daca e divizibil cu 5 si ‘foo bar’ daca e divizibil si cu 3 si cu 5.
+- Afisati numarul de divizori al unui numar.
+- Afisati daca un numar este prim.
+- Afisati daca un numar este palindrom ( de exemplu 54145. Citit invers e la fel)
+- Calculati suma tuturor numerelor de la 1 la 50 si produsul tuturor numerelor de la 1 la 15. Folositi cel putin 2 modalitati.
