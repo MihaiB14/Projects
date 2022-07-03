@@ -1,0 +1,16 @@
+Se considera Class Nod
+{
+  int info;
+  Nod* next;
+ };
+ - constructor de initializare si parametrixare pentre clasa Nod.
+ - destructor pentru clasa Nod.
+ Clasa Lista_circulara are:
+  - cel putin un membru privat "Nod*" reprezentand nodul considerat prim.
+  - metosa publica de adaugare a unui element pe o pozitia.
+  - supraincarcarea operatorului >>, realizata prin utilizarea succesiva a metodei declarate anterior.
+  - metoda publica de stergere a unui element de pe o pozitie.
+  - metoda publica pentru inversarea legaturilor listei.
+  - metoda publica care primeste parametrul intreg k si realizeaza eliminarea elementelor listei circulare din k in k pana la golirea aceasteia (elementele vor fi afisare in ordinea in care sunt eliminate).
+  - supraincarcarea operatrorului +, care sa efectueze concatenarea a 2 liste circulare, rezultand intr-o noua lista circulara.
+  

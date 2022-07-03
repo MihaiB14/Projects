@@ -1,0 +1,19 @@
+Abordarea aleasa a fost aceea de a citi atent fiecare cerinta urmand apoi sa fac ceea ce era nevoie intr-un mod cat mai simplu si clar.
+Tema aceasta a fost printre cele mai utile, aratandu-ne concret ca cele invatat pe parcursul semestrului pot fi aplicate cu usurinta pe modele realiste, si de ce nu sa ne arate ca realitate nu este chiar atat de greu de implementat in cod scris.
+Implementarea este una destul de complexa, nici pe departe naiva. Fiind doar o tema, eficienta sa nu cred ca ar trebuii sa conteze foarte mult, insa nu ar fi stricat.
+
+Functiile necesare sortarilor sau a identificarii anumitor produse au fost create in clasa Utility.
+
+Detalii organizatorice:
+	- C1: nu a fost nimic special, doar au trebuit implementate diferite cerinte simple cerute de fiecare functie.
+	- C2: aceeasi complexitate ca la cerinta 1, nimic special
+	- C3: pentru fiecare subpunct am cautat tipul de produs sau utilizator dorit cu ajutorul functiilor getUserType(), getProductType() sau in unele cazuri existenta valiabilei returnate de functia dynamic_cast(). Pentru o functionare corecta a unei cerinte am facut o copie listei de useri si am sortat-o crescator in functie de ID.
+	- C4: cat timp numarul de elemente din vector este mai mic decat capacity, se tot adauga la inceput noul element, in caz contrar, se verifica daca noul element pe care dorim sa-l introducem exista deja in vector; daca da, se pune pe prima pozitie; contrar se adauga pe prima pozitie si se elimina elementul e pe ultima pozitie din vector. In final se forteaza capacitatea vectorului sa fie cea necesara.
+	- C5: Testele simple precum existenta unui user sau a unui produs se verifica cu ajutorul functiilor implementate in clasa Utility. Urmeaza apoi diferinte conditii pentru a afla daca produsul exista sau nu in cos. In functie de caz se aplica diferite metode pentru a rezolva cerinta.
+
+Implementare:
+- toate cerintele au fost implemetate cu succes, inclusiv bonusul
+- nu exista functionalitati extra
+- nu exista functionalitati lipsa
+- nu am intamplinat dificulati semnificative(doar greseli mici care m-au costat ore bune de rezolvare :) )
+- in pricipiu intreaga tema a fost interesanta, si chiar putin mai simpla decat tema 1(probabil teoriei care a fost in cazul acestei teme 2 mult mai recent citita si aplicata)

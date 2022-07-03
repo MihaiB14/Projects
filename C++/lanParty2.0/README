@@ -1,0 +1,26 @@
+!!Acceasi structura ca problema lanParty, dar folosind STL.!!
+
+Clase:
+	-Player = retine datele despre fiecare jucator(nume, prenume, puncte)
+	-Echipa = datele fiecarei echipe(numar jucatori, nume echipa, un vector de jucatori)
+	-Node = contine lista de echipe
+	-Meci = se gasesc in aceasta clasa 2 elemente de tip pointer la echipa in care se stocheaza 2 adrese
+	-BST = un map(cheia este experienta iar elementul un pointer la echipa) alaturi de 2 adrese(left si right);
+	-AVL = are aceleasi atribute ca si clasa BST dar are in plus nivelul pentru fiecare nod;
+Functii:
+	-citire_afisare() = preia datele din fisierul d.in pentru fiecare test si seteaza numarul echipelor si apoi repetitiv datele fiecarui jucator creand un vector de jucatori. 
+			   Astfel se adauga in lista cate o echipa, adaugandu-se tot timpul la inceput. In final se afiseaza lista in fisier. 
+	-speciala() = returneaza cel mai mare numar care este o putere a lui 2 fiind in acelasi timp si mai mic decat numarul de echipe.
+	-stergere() = Cat timp numarul de echipe nu satisface conditia (nr_team > special), se cauta in lista echipa ce are cea mai mica experienta, stergandu-se, urmand din nou
+		     verificarea numarului de echipe. In final se modifica fisierul de output.
+	-creare_coada() = Functia creaza o coada cu elemente de tip meci.
+	-afis_coada_creare_stive() = Pentru o eficienta sporita, in timp ce se afiseaza coada cu meciuri, se creaza si cele 2 stive, cea de echipe castigatoare, respectiv invinse.
+				    Inainte de a fi puse in stiva cu castigatori, fiecare echipa va avea numarul de puncte modificat cu un punct in plus(Se modifica punctele fiecarui jucator)
+	-afisare_castigatori() = Se afiseaza in fisierul de output, in continuarea acestuia, echipele castigatoare din stiva.
+	-stergere_invinsi() = Echipele pierzatoare sunt elimintate prin distrugerea stivei.
+	-creare_lista() = Se creaza o noua lista de echipe, fiind luate din stiva de echipe castigatoare, aceasta fiind totodata distrusa.
+	-creare_coada_stive() = Se rezolva cerinta 3 cu ajutorul functiilor enumerate mai sus. De mentionat este faptul ca se creaza o lista cu ultimele 8 echipe ramase in joc ce va fi folosita mai tarziu.
+	-BST_function() = Cu ajutorul metodelor implementate in clasa BST, se creaza un arbore binar de cautare cu echipele din lista creata la cerinta anterioara. Aceasta lista este modificata la finalul; functiei, 
+			 aceasta continand ultimele 8 echipe, dar ordonate descrescator in functie de experienta.
+	-AVL_function() = Cu ajutorul metodelor implementate in clasa AVL, se creaza arborele dorit. De specificat este faptul ca functia modif_inaltime() din clasa AVL modifica inaltimile nodurilor dupa ce au fost
+			 inserate toate nodurile, in arbore.

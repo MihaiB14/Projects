@@ -1,0 +1,54 @@
+OOP Lan Party Checker  
+
+
+OOP Lan Party Checker is a script designed to automate the homework testing. It's an open-source project build by teaching assistants for students of Faculty of Automatic Control & Systems Engineering - PUB. Its purpose is to make the grading systems more transparent and easier for both students & teaching assistants.
+
+
+## Running the Checker
+To verify that the checker is working on your computer follow the next steps:
+  - download this repo
+  - open a terminal in the root folder of the downloaded repo
+  - type the following command: "./checker.sh"
+  - if you get a permission error type the following command: "chmod +x checker.sh"
+
+Clase:
+	Player = retine datele despre fiecare jucator;
+	Echipa = datele despre fiecare echipa, alaturi de adresa urmatorului element din lista;
+	Node = retine adresa primului element al listei;
+	Meci = se gasesc in aceasta clasa 2 elemente de tip pointer la echipa in care se stocheaza 2 elemente(copii absolute) si adresea urmatorului element de tip meci din lista de meciuri;
+	Coada = 2 elemente de tip pointer ce retin adresa primului element din coada, respectiv a ultimului;
+	Stiva = numarul de elemente din stiva si adresa primului, respectiv ultimului elemet introdus in stiva(fiind si adresa primului element ce va fi extras);
+	BST = un pointer de tip echipa fiind o copie absoluta a unui element de tip echipa, alaturi de 2 adrese(left si right);
+	AVL = are aceleasi atribute ca si clasa BST dar are in plus nivelul pentru fiecare nod;
+
+Functii:
+	citire_afisare() = preia datele din fisierul d.in pentru fiecare test si seteaza numarul echipelor, creand apoi primul element din lista manual, retinandu-l cu ajutorul 
+			   clasei Node, acesta fiind primul element din lista noastra. Restul elementelor sunt create repetitiv, fiind in final afisate in fisierul r.out al 
+			   fiecarui test.
+	speciala() = returneaza cel mai mare nuamar care este o putere a lui 2 fiind in acelasi timp si mai mic decat numarul de echipe.
+	minim() = returneza adresa din lista unde se afla echipa cu experienta cea mai mica.
+	stergere() = sterge repetitiv si o singura data pe iteratie echipa din lista ce are experienta minima, pana cand numarul de echipe devine o putere a lui 2. In final 
+		     suprascriem fisierul r.out pt fiecare test.
+	creare_coada() = creaza un element de tip coada folosindu-se de lista de echipe modificata la Taskul 2.
+	afisare_coada_creare_stive() = in fisierul r.out respectiv fiecarui test adaugam coada de meciuri, dar in acelasi timp cream si cele 2 stive de castigatori, respectiv pierzatori. 
+				       Comparam experientele iar in stiva de castigatori punem echipa care are experienta strict mai mare decat cealalta, dar modificand si punctajele fie-
+				       carui jucator prin fuctia add_points() din acea echipa. Se mai creaza inca o stiva care este copia stivei de castigatori pentru a fi folosita mai tarziu(w_cpy).
+	afisare_castigatori() = afisam in continuarea fisierului stiva de castigatori cu punctajele aferente, astfel stivsa disrtrugandu-se. 
+	stergere_invinsi() = parcurgem stiva de invinsi stergand echipele pierzatoare, distrugand si stiva.
+	creare_cap() = foloseste si distruge copia stivei de castigatori pentru a crea o lista cu aceste echipe(folosita pentru a reface meciurile).
+	creare_arbori() = creaza o lista cu ultimele 8 echipe din concurs folosind o lista de echipe.
+	creare_coada_stive() = functia aceasta se folosete de functiile creare_coada(), afisare_coada_creare_stive(), afisare_castigatori(), stergere_invinsi(), creare_cap(), creare_arbori()
+			       pentru a rezolva taskul 3, o bucla while in care se apeleaza intr-o ordine anume aceste functii. Se incremeneteaza contorul pentru a scrie in fisier numarul fiecarei
+			       runde, se creaza coada din lista de echipe, apoi in momentul in care se afiseaza meciurile se creaza si cele 3 stive. Una din stive este folosita pentru a crea 
+			       din nou lista de echipe (folosita pentru a crea coada tot cu functia creare_coada()), iar celelalte sunt folosite pentru afisarea castigatorilor si respectiv stergerea 
+			       echipelor pierzatoare. Lista pentru arbori se va crea in momenutul in care numarul total de echipe din meci este de 16. In final se imparte numarul total de echiupe
+			       la 2 pentru a continua corect restul de operatiuni.
+	BST_function() = parcurge lista creata special la punctul 3, distrugand-o in acelasi timp, creand un arbore binar in functie de experienta fiecarei echipe. Fata de un algoritm obisnuit, a
+			 trebuit sa explicitam cazul in care 2 echipe au aceeasi experinta, criteriul de comparatie facandu-se in situatia acesta in functie de nume(alfabetic -> dorim sa introducem 
+			 o echipe care incepe cu litera 'a' fata de o echipa cu acelasi punctaj dar care incepe cu 'b'; echipa care incepe cu 'a' va fi pusa in stanga echipei care incepe cu 'b').
+			 In final afisam in continuarea fisierului cu ajutorul functiei inorder din clasa BST, echipele arborelui.
+	AVL_function() = creaza o stiva deja sortata cu elementele din arborele de tip BST de la punctul 4. Problema apare in momentul in care dorim sa introducem o echipa ce are aceeasi experienta cu 
+			 o echipa deja introdusa. In afara de criteriu numelui se mai adauga si niste criterii pentru a reactualiza nivelul fiecarui nod(acesta operatiune nu mi-a iesit din pacate :( ).
+			 La final afisam din nou in continuarea fisierului, numele echipelor de pe nivelul 2 din arbore.
+	Eliberare_memorie() = aceasta functie sterge fiecare echipa din lista de echipe realizata la taskul 2 eliberand memoria.
+ 
