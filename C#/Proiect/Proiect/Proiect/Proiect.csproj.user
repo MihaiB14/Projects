@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\Mihai\Desktop\Facultate\An 3\BD\Proiect\Proiect\Proiect\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="COMPLEX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DELETECOMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DELETEPERSON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="INQUIRY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LOG_IN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADDVEHICLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADDTAXES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SIMPLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="INQUIRYDISPLAY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TABELES2UPDATE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TABLES2DELETE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UPDATETAX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UPDATEVEH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="USER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADMIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TABLES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DISPLAY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADDCOMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADDPERSON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADDDAMAGE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADDDAMAGE_VEHICLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,178 @@
+Faza 1, punctele a si b
+~~~~~~~~~~~~~~~~~~~~~~~
+  . Se va initia o singura data apelul: 
+
+    >> [omega_p,omega_s,M] = PS_Prj_2_Faza_1ab(ng,ns) ; 
+
+    unde ng = numarul grupei (333AB=1, 334AB=2, 331AC=3, ..., 334AC=6, Restantieri=7),
+    iar ns este numarul de ordine al studentului in grupa sa. (Functia 
+    aceasta, ca si cele ce urmeaza, este disponibila pe Moodle in 
+    subdirectorul 12 si in saptamana #10.)
+  . Primele doua argumente de iesire sunt pulsatiile de proiectare a filtrului, exprimate 
+    prin valori in banda (0,pi). De asemenea, rutina returneaza omega_p <= omega_s.  
+  . Ultimul argument de iesire, M, este un vector cu 7 elemente indicand ordine ale filtrului 
+    de proiectat. Ordinele sunt ordonate crescator. Atentie! Functiile FIRLS si FIRPM ofera 
+    filtre de ordin M+1. Prin urmare, se va scadea 1 din vectorul M obtinut, inainte de apelul 
+    functiei corespunzatoare. 
+  . Atentie! Memorati cei 3 parametri de proiectare returnati (omega_p, omega_s, M), deoarece 
+             veti avea nevoie de ei la punctele urmatoare. 
+  . La fiecare punct (a sau b), se vor trasa grafice in trei matrici. 
+  . Primele doua matrici au cate 3 linii si 7 coloane. 
+  . Ultima matrice are 7 linii si 2 coloane. 
+  . Prima matrice se refera la datele de proiectare {omega_p,omega_s,M}. Cum M are 7 elemente, 
+    fiecare coloana a matricii corespunde unei valori a lui M. Pe fiecare coloana a matricii, 
+    se vor trasa 3 grafice referitoare la filtrul proiectat pentru M corespunzator: 
+     - spectrul filtrului in coordonate liniare (pentru a observa fenomenul Gibbs in banda de trecere);
+     - spectrul filtrului in dB (pentru a observa lobii paraziti);
+     - faza filtrului.
+    Graficele se vor trasa folosind functia FREQZ cu argumente de iesire, iar rezolutia de reprezentare 
+    trebuie sa fie de minim 1000 de puncte. Pentru afisarea fazei, puteti folosi 
+    functia auxiliara UNWRAP (impreuna cu functia ANGLE), pentru a diminua oscilatiile/rupturile 
+    acesteia si a observa variatia liniara in banda de trecere. Pe fiecare grafic al spectrului, se vor 
+    trasa cele doua verticale corespunzatoare pulsatiilor folosite in proiectare. In titlul primului grafic, 
+    se vor indica metoda de proiectare (LS sau PM) si ordinul filtrului. 
+  . A doua matrice se refera la datele de proiectare {pi-omega_s,pi-omega_s,M}. Ea are aceeasi 
+    structura ca si matricea anterioara.  
+  . A treia matrice se refera la secventele pondere ale filtrelor proiectate. Fiecare linie 
+    a matricii corespunde unui ordin M (sunt 7 linii). Pe fiecare linie se traseaza (folosind functia STEM) 
+    cele doua secvente pondere ale filtrelor obtinute pentru {omega_p,omega_s}, respectiv 
+    {pi-omega_s,pi-omega_p}. Indicati si aici metoda de proiectare (LS sau PM) plus ordinul filtrului, la 
+    fiecare titlu. 
+  . Nu este suficient sa prezentati graficele, trebuie sa fiti pregatiti sa raspundeti la 
+    intrebari legate de aspectul acestor caracteristici in frecventa (care ar fi cauzele 
+    neregulatitatilor, daca ordinul filtrului conteaza etc.) 
+  . Atentie! Datele de proiectare omega_p, omega_s si M sunt aceleasi pentru primele doua puncte 
+             ale fazei (a si b). NU apelati inca o data rutina pentru punctul b, ci memorati datele obtinute 
+             la punctul a. In acest fel, se pot compara caractertisticile filtrelor cu acelasi ordin, dar 
+             proiectate prin metode diferite. 
+
+Faza 1, punctul c
+~~~~~~~~~~~~~~~~~
+  . Se va initia apelul: 
+
+    >> M = PS_Prj_2_Faza_1c(ng,ns) ; 
+
+    cu aceleasi argumente de intrare ca mai sus. 
+  . Se va obtine un unic ordin de filtru, M (din care trebuie scazut 1, inainte de apelurile 
+    functiilor FIRLS si FIRPM). 
+  . Pulsatiile de proiectare sunt omega_p si omega_s de la punctul a. Se recomanda parcurgerea acestui 
+    punct atat pentru pulsatiile {omega_p,omega_s}, cat si pentru pulsatiile {pi-omega_s,pi-omega_p}. 
+  . Atenuarile minime determinate pe caracteristica spectrala se pot afisa in titlurile graficelor 
+    (folosind functia SPRINTF) sub forma ALS = * dB, APM = * dB (ambele in deciBeli!).
+  . Nu uitati sa comentati rezultatele obtinute (care metoda de proiectare vi se pare mai buna?). 
+
+Faza 1, punctul d
+~~~~~~~~~~~~~~~~~
+  . Se va initia apelul: 
+
+    >> ws = PS_Prj_2_Faza_1d(ng,ns) ; 
+
+    cu aceleasi argumente de intrare ca mai sus. 
+  . Se va obtine ws - ponderea supraunitara de aplicat in banda de stopare. 
+  . La acest punct, se vor relua pasii de la punctul c (cu aceleasi date de proiectare), dar in 
+    doua situatii (pentru fiecare pereche de pulsatii de proiectare): 
+    s1. fara ponderi, cu afisarea raportului dintre cele doua dispersii ale erorilor 
+        (in loc de atenuarea minima) sub forma: RLS = *, RPM = * (NU in deciBeli!);
+    s2. cu ponderile 1 in banda de trecere si ws in banda de stopare; se afiseaza si aici 
+        raporturile dintre dispersii, ca la s1.  
+  . Vor rezulta doua perechi de grafice. Graficele din aceeasi pereche (filtre fara si 
+    filtre cu ponderi) trebuie comparate intre ele. Nu uitati de raportul dintre dispersii, 
+    care va poate ajuta in efectuarea aceastei comparatii. 
+
+Faza 1, punctul e
+~~~~~~~~~~~~~~~~~
+  . Pentru FTS, se vor utiliza exact aceleasi pulsatii de proiectare {omega_p,omega_s} ca la 
+    punctul a. Doar ca, aici, omega_p devine pulsatie de stopare si omega_s - pulsatie de trecere. 
+    Se recomanda utilizarea si a perechii de pulsatii {pi-omega_s,pi-omega_p}. 
+  . Pentru FTB, cele 4 pulsatii de proiectare sunt: {omega_p,omega_s,pi-omega_p,pi-omega_s}. 
+    Desigur, multimea lor trebuie ordonata crescator. 
+  . Observatie importanta. 
+    # In cazul memoriei filtrului de ordin impar (M=impar), rutinele FIRLS si FIRPM returneaza 
+      secvente pondere de lungime M+2, in cazul FTS, FTB. Pentru a reveni la lungimea M+1, apelurile 
+      recomandate ale rutinelor sunt: 
+                                     >> h = firls(M,W,A,'h') ; 
+                                     >> h = firpm(M,W,A,'h') ;
+      De remarcat ultimul argument de intrare. 
+    # Intotdeauna, verificati lungimea secventei pondere returnate. Daca primul argument de intrare 
+      este M, ea trebuie sa fie M+1, indiferent de tipul filtrului. 
+  . Atentie! Aici se cer si graficele secventelor pondere ale filtrelor optimale, nu doar 
+             caracteristicile lor in frecventa. 
+  . Pentru fiecare filtru optimal, se vor calcula doua norme: una referitoare la secventa pondere 
+    optimala versus secventa pondere ideala trunchiata (care are tot M valori) si alta referitoare 
+    la raspunsul in frecventa al filtrului optimal versus raspunsul in frecventa ideal. 
+  . Expresiile secventelor pondere ideale pentru FTS si FTB trebuie deduse aplicand TCFD inversa 
+    asupra raspunsului ideal in frecventa. Atentie: in banda de trecere, filtrul nu are valoarea 
+    unitara, ci exp(-j*K*omega), unde K=M/2 (altfel, secventa pondere t nu mai este cauzala, deci nici 
+    realizabila fizic)!
+  . Comparatia ceruta poate face referire la distantele filtrelor optimale fata de filtrele ideale. 
+
+Faza 2, punctul a
+~~~~~~~~~~~~~~~~~
+  . Se vor utiliza exact aceleasi pulsatii de proiectare {omega_p,omega_s} ca la Faza 1, punctul a. 
+    Se recomanda utilizarea si a perechii de pulsatii {pi-omega_s,pi-omega_p}, spre comparatie. 
+  . Atentie! Folositi datele de proiectare deja memorate. 
+             NU mai apelati inca o data functia de la Faza 1, punctul a! 
+  . Ordinul filtrului este M=20, pentru toti studentii. 
+  . Intarzierea de grup, K, se va alege astfel, de catre toti studentii: 5, 7, 10, 13, 15.
+  . Functia GRPDELAY evalueaza intarzierea de grup pe axa pulsatiilor normalizate. Implicit, banda 
+    este [0,+pi]. Daca este necesara banda [-pi,+pi], se poate folosi un argument de intrare optional: 
+    'whole'. Atentie! In acest ultim caz, functia returneaza intarzierea de grup pe banda 
+    [0,2*pi] si nu [-pi,+pi]. Daca apelati functia GRPDELAY, folositi rezolutia de cel putin 1000 
+    de linii spectrale, ca in Faza 1. 
+  . La acest punct, se vor afisa urmatoarele grafice, pentru fiecare pereche de pulsatii si K: 
+    - caracteristica de frecventa a filtrului obtinut, pe intreaga banda [-pi,+pi], cu verticale trasate 
+      in dreptul celor doua pulsatii de proiectare;
+    - intarzierea de grup a filtrului obtinut, pe intreaga banda [-pi,+pi]; si aici se vor trasa cele 
+      doua verticale;
+    - secventa pondere a filtrului obtinut. 
+  . Fiind multe grafice de afisat, se recomanda organizarea lor in matrici. Se pot forma doua matrici de 
+    cate 3 linii si 5 coloane, cate una pentru fiecare pereche de pulsatii de proiectare. Pe fiecare coloana,
+    se va preciza valoarea lui K (fie pe unul dintre cele 3 grafice, fie in unul dintre titluri, fie pe o axa 
+    verticala). 
+  . Comentariile trebuie sa se refere la calitatea filtrelor si simetriile sau asimetriile graficelor 
+    afisate, cu explicatii convingatoare. 
+
+Faza 2, punctul b
+~~~~~~~~~~~~~~~~~
+  . 
+    se recomanda folosirea si a perechii de pulsatii {pi-omega_s,pi-omega_p}.Parametrii de proiectare ai filtrului se vor alege exact ca la Faza 1, punctul a. De asemenea, 
+  . Atentie! Folositi datele de proiectare deja memorate. 
+             NU mai apelati inca o data functia de la Faza 1, punctul a! 
+  . Graficele trasate vor fi organizate in trei matrici tot ca la Faza 1, punctul a. Aici, insa, 
+    in plus, trebuie sa indicati pe unul dintre graficele filtrului curent proiectat performanta 
+    sa relativa calculata. 
+  . Comparati filtrele cu referire la aceasta performanta si incercati sa raspundeti la intrebarea: 
+    Sunt filtrele de ordin mai mare intotdeauna mai bune sau conteaza si largimea zonei de tranzitie?
+
+Faza 2, punctul c
+~~~~~~~~~~~~~~~~~
+  . Acest punct este similar punctului e. al Fazei 1. Aici, insa, in plus, se va calcula si afisa 
+    performanta relativa a fiecarui filtru proiectat. Pe baza ei, se va putea efectua comparatia 
+    dintre filtrele proiectate. 
+  . Atentie! Peformanta relativa trebuie evaluata pentru fiecare tip de filtru in parte. Ea nu se 
+             calculeaza cu aceeasi formula ca la FTJ. Va exista o formula de calcul pentru FTS si 
+             alta pentru FTB. 
+
+Faza 3 (optionala)
+~~~~~~~~~~~~~~~~~~
+  . Parametrii de proiectare ai FTJ se vor alege exact ca la Faza 1, punctul a. De asemenea, 
+    se recomanda folosirea si a perechii de pulsatii {pi-omega_s,pi-omega_p}.
+  . Atentie! Folositi datele de proiectare deja memorate. 
+             NU mai apelati inca o data functia de la Faza 1, punctul a!
+  . Pentru fiecare M, se vor alege 3 valori ale intarzierii de grup K: M/4, M/2, 3*M/4. 
+    Atentie! Valoarea lui K NU trebuie trunchiata la un intreg!
+  . Pentru fiecare pereche {M,K}, se va rezolva problema de optimizare pentru N ales 
+    astfel: {250, 500, 1000}. 
+  . Se vor afisa graficele raspunsurilor in frecventa si secventelor pondere pentru toate 
+    filtrele proiectate, ca in cazul fazelor precedente. In plus, pentru fiecare filtru, se va 
+    afisa pe unul dintre grafice si performanta relativa, pentru a efectua o comparatie obiectiva
+    intre ele. 
+  . Atentie! Organizati graficele in matrici, ca sa fie mai usor de vizualizat si verificat. 
+             Pentru fiecare pereche de pulsatii de proiectare, exista 7 valori ale ordinului M. 
+             Pentru fiecare valoare a ordinului M exista 3 valori ale intarzierii de grup, K. 
+             Pentru fiecare pereche {M,K} exista 3 valori ale rezolutiei de proiectare, N. 
+             Prin urmare, o matrice de tip 3x7 corespunde unei valori a lui K si unei valori a lui N.
+             Astfel, sunt 9 matrici de tip 3x7 pentru o pereche de pulsatii de proiectare. 
+             Vor mai fi inca 9 matrici de tip 3x7 pentru cealalata pereche de pulsatii de proiectare. 
+             De asemenea, exista si doua grupuri a cate 9 matrici de tip 7x2 corespunzatoare secventelor 
+             pondere. 

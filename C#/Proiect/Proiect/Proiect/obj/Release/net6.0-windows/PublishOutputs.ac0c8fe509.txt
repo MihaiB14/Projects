@@ -1,0 +1,11 @@
+C:\Users\Mihai\Desktop\Facultate\An 3\BD\Proiect\Aplicatie\Proiect.exe
+C:\Users\Mihai\Desktop\Facultate\An 3\BD\Proiect\Aplicatie\Proiect.dll
+C:\Users\Mihai\Desktop\Facultate\An 3\BD\Proiect\Aplicatie\Proiect.deps.json
+C:\Users\Mihai\Desktop\Facultate\An 3\BD\Proiect\Aplicatie\Proiect.runtimeconfig.json
+C:\Users\Mihai\Desktop\Facultate\An 3\BD\Proiect\Aplicatie\Proiect.pdb
+C:\Users\Mihai\Desktop\Facultate\An 3\BD\Proiect\Aplicatie\System.Data.SqlClient.dll
+C:\Users\Mihai\Desktop\Facultate\An 3\BD\Proiect\Aplicatie\runtimes\win-arm64\native\sni.dll
+C:\Users\Mihai\Desktop\Facultate\An 3\BD\Proiect\Aplicatie\runtimes\win-x64\native\sni.dll
+C:\Users\Mihai\Desktop\Facultate\An 3\BD\Proiect\Aplicatie\runtimes\win-x86\native\sni.dll
+C:\Users\Mihai\Desktop\Facultate\An 3\BD\Proiect\Aplicatie\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Mihai\Desktop\Facultate\An 3\BD\Proiect\Aplicatie\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
